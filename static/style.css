@@ -1,0 +1,46 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+
+}
+
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+
+.gradient {
+    background: #FCAB28;
+    background: linear-gradient(135deg, #FCAB28, #F98649);
+    backdrop-filter: blur(10px);
+}
+
+.orange {
+    background-color: #FCAB28 !important;
+    color: white !important;
+}
+
+/*login y register */
+
+.box-area{
+    width: 930px;
+}
+.right-box{
+    padding: 40px 30px 40px 40px;
+}
+
+@media only screen and (max-width: 768px){
+    .box-area{
+       margin: 0 10px;
+       width: auto;
+    }
+    .left-box{
+       height: 100px;
+       overflow: hidden;
+    }
+    .right-box{
+       padding: 20px;
+    }
+}
+

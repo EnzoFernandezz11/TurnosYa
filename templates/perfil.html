@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Perfil
+{% endblock %}
+
+{% block main %}
+<div class="d-flex justify-content-start ps-5 mt-3 mb-3">
+ <div>
+    <h1 style="font-family:Roboto;"> {{ user.username }} </h1>
+    <p style="font-family:Roboto;">Comienzo de la semana laboral: {{ horarios.p_dia}}</p>
+    <p style="font-family:Roboto;">Fin de la semana laboral: {{ horarios.f_dia}}</p>
+    <p style="font-family:Roboto;">Desde la hora {{horarios.p_hora}} hasta {{horarios.f_hora}}</p>
+  </div>
+</div>
+<div class="d-flex justify-content-start ps-5 mt-3 mb-3">
+  <div  class="row border rounded-5 p-3 bg-white shadow box-area col-4">
+      <form action="/perfil" method="POST">
+        <p class="fs-5">Ingrese el nombre y rubro de su negocio</p>
+        <input class="form-control mt-3"type="text" name="rubro" placeholder="Rubro">
+        <input class="form-control mt-3"type="text" name="nombre_negocio" placeholder="Nombre de tu Negocio">
+        <button class="btn mt-2" style="background-color:#FECDA6;" type="Sumbit">Confirmar</button>
+      </form>
+  </div>
+</div>
+<div class="d-flex justify-content-center mt-5 mb-3">
+  <button class="btn mt-2" style="background-color:#FCAB28; color:white;  "><a class="nav-link fs-4" href="{{ url_for('turnos', id_user=user.id) }}">ENVIAR INGRESO DE TURNO</a></button>
+</div>
+
+{% endblock %}

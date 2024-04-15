@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+<body class="gradient">
+  <div class="d-flex justify-content-center mt-5" style="font-family:Roboto;">
+    <div class="row border rounded-5 p-3 bg-white shadow">
+      <p>{{ fecha_actual }}</p>
+    </div>
+</div>
+
+  <div class="container min-vh-100 d-flex align-items-center">
+    <div class="position-absolute top-50 start-50 translate-middle " style="font-family:Roboto; color:white;">
+      <h1>Hola, {{ user.username }}</h1>
+    </div>
+  </div>
+</body>
+
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Horarios y disponibilidad
+{% endblock %}
+
+{% block main %}
+<div class="container">
+    <form action="/horarios" method = "POST">
+        <!-- seleccionar dias -->
+        <div>
+            <p class="mt-4 fs-5">Selecciona un dia de comienzo y un dia de final de la semana laboral</p>
+            <label for="p_dia" class="form-label">Selecciona el primer dia:</label>
+            <select id="p_dia" name="p_dia" class="form-select">
+                <option selected>Selecciona...</option>
+                <option value="lunes">Lunes</option>
+                <option value="martes">Martes</option>
+                <option value="miercoles">Miércoles</option>
+                <option value="jueves">Jueves</option>
+                <option value="viernes">Viernes</option>
+                <option value="sabado">Sábado</option>
+                <option value="domingo">Domingo</option>
+            </select>
+
+            <label for="f_dia" class="mt-1">Selecciona el ultimo dia:</label>
+            <select id="f_dia" name="f_dia" class="form-select">
+                <option selected>Selecciona...</option>
+                <option value="lunes">Lunes</option>
+                <option value="martes">Martes</option>
+                <option value="miercoles">Miércoles</option>
+                <option value="jueves">Jueves</option>
+                <option value="viernes">Viernes</option>
+                <option value="sabado">Sábado</option>
+                <option value="domingo">Domingo</option>
+            </select>
+        </div>
+        <!-- seleccionar horas -->
+        <div class="mt-4">
+            <p class="fs-5">Selecciona la hora de comienzo y la de salida</p>
+            <label for="p_hora">Selecciona la hora de comienzo:</label>
+            <input name="p_hora" id="p_hora" type="time" class="form-control">
+            <label for="f_hora" class="mt-1">Selecciona la hora de salida:</label>
+            <input name="f_hora" id="f_hora" type="time" class="form-control">
+        </div>
+        <!-- seleccionar el intervalo-->
+        <div class="mt-3 fs-5">
+            <p>Selecciona la duracion de los turnos (minutos)</p>
+            <input name="intervalo" type="nuber" min="0" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-lg  fs-6 mt-3"  style="background-color:#FCAB28; color:white;">ENVIAR</button>
+    </form>
+</div>
+{% endblock %}
